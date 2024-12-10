@@ -1,6 +1,8 @@
 // PUT YOUR CODE HERE
 
-const timeline = gsap.timeline();
+const timeline = gsap.timeline({
+  repeat: -1,
+});
 
 timeline
   .from(".box.red", {
@@ -30,6 +32,7 @@ timeline
   .to(".box.red", {
     x: "-100%",
     left: "100vw",
+    backgroundColor: "green",
     borderRadius: "50%",
   })
   .to(
@@ -37,6 +40,7 @@ timeline
     {
       y: "-100%",
       top: "100vh",
+      backgroundColor: "blue",
       borderRadius: "50%",
     },
     "<"
@@ -46,6 +50,7 @@ timeline
     {
       x: "100vw",
       left: "-100%",
+      backgroundColor: "yellow",
       bottom: "0",
       borderRadius: "50%",
     },
@@ -56,6 +61,7 @@ timeline
     {
       y: "0",
       top: "0",
+      backgroundColor: "red",
       borderRadius: "50%",
     },
     "<"
