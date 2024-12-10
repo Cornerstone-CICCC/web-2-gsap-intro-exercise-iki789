@@ -4,34 +4,34 @@ const timeline = gsap.timeline();
 
 timeline
   .from(".box.red", {
-    scale: 0,
+    top: -200,
+    left: -200,
     transformOrigin: "left top",
     delay: 0.1,
   })
   .from(".box.green", {
-    scale: 0,
+    right: -200,
+    top: -200,
     transformOrigin: "right top",
     delay: 0.1,
   })
   .from(".box.blue", {
-    scale: 0,
+    right: -200,
+    bottom: -200,
     transformOrigin: "right bottom",
     delay: 0.1,
   })
   .from(".box.yellow", {
-    scale: 0,
-    // transformOrigin: "left bottom",
+    left: -200,
+    bottom: -200,
+    transformOrigin: "left bottom",
     delay: 0.1,
   })
-  .to(
-    ".box.red",
-    {
-      x: "-100%",
-      left: "100vw",
-      borderRadius: "50%",
-    },
-    "<"
-  )
+  .to(".box.red", {
+    x: "-100%",
+    left: "100vw",
+    borderRadius: "50%",
+  })
   .to(
     ".box.green",
     {
@@ -62,6 +62,7 @@ timeline
   )
   .to(".box.yellow", {
     x: "-200",
+    delay: 1,
   })
   .to(
     ".box.red",
